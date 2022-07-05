@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>TestCode for HTML and JavaScript</title>
+
+</head>
+<body>
+
+<h1 style="font-size=:10vw">HELLO WORLD!</h1>
+
+
+<form style="font-size=10vw"> 
+<input type="text" id="FirstNumber"><br>
+<input type="text" id="SecondNumber"><br>
+<input type="button" value="output" onclick="calcSum()"><br>
+<input type ="text" id="output">
+</form>
+<script>
+    function calcSum()
+    {
+    var FirstNumber = document.getElementById("FirstNumber").value;
+    var SecondNumber = document.getElementById("SecondNumber").value;
+    var result = Number(FirstNumber)+Number(SecondNumber); 
+    document.getElementById("output").value = result
+    }
+    </script>
+</body>
+</html>
