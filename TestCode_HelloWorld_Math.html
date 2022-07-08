@@ -6,23 +6,70 @@
 </head>
 <body>
 
-<h1 style="font-size=:10vw">HELLO WORLD!</h1>
+<h1>HELLO WORLD!</h1>
 
+<!DOCTYPE html>
+<html>
+<body>
 
-<form style="font-size=10vw"> 
-<input type="text" id="FirstNumber"><br>
-<input type="text" id="SecondNumber"><br>
-<input type="button" value="output" onclick="calcSum()"><br>
-<input type ="text" id="output">
-</form>
-<script>
-    function calcSum()
-    {
-    var FirstNumber = document.getElementById("FirstNumber").value;
-    var SecondNumber = document.getElementById("SecondNumber").value;
-    var result = Number(FirstNumber)+Number(SecondNumber); 
-    document.getElementById("output").value = result
-    }
-    </script>
-</body>
-</html>
+    <!DOCTYPE html>
+    <html>
+    <body>
+    
+        <table>
+            <tr>
+                <th>First Number</th>
+                <th>Second Number</th>
+                  <th>Output</th>
+                     
+            </tr>
+            <tr>
+             <th>
+            <br>
+            <br>
+            <input type="text" id="FirstNumber"><br>
+            <br>
+            <input type="text" id="MFirstNumber"><br>
+            <br>
+             </th>
+             <th>
+             <br>
+             <br>
+             <input type="text" id="SecondNumber"><br> 
+             <br>
+             <input type="text" id="MSecondNumber"><br>
+             <br>
+           
+            </th>
+            <th>
+            <br>
+            <input type="button" value="Submit" onclick="calcSum()"><br>
+              <input type ="text" id="output"> <br>
+              <input type="button" value="Submit" onclick="calcMult()"><br>
+              <input type ="text" id="OUTPUT">
+            
+            </th>
+            </tr>
+            
+            
+        </table>
+    
+    
+    <script>
+        function calcSum()
+        {
+        var FirstNumber = document.getElementById("FirstNumber").value;
+        var SecondNumber = document.getElementById("SecondNumber").value;
+        var result = Number(FirstNumber)+Number(SecondNumber); 
+        document.getElementById("output").value = result
+        }
+        function calcMult()
+        {
+        var MFirstNumber = document.getElementById("MFirstNumber").value;
+        var MSecondNumber = document.getElementById("MSecondNumber").value;
+        var RESULT = Number(MFirstNumber) * Number(MSecondNumber); 
+        document.getElementById("OUTPUT").value = RESULT
+        }
+        </script>
+    </body>
+    </html>
