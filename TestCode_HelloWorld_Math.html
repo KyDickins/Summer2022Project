@@ -1,69 +1,59 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>TestCode for HTML and JavaScript</title>
-
-</head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body style="font-size:1.3vw">
 <body>
 
-<h1>HELLO WORLD!</h1>
 
-<!DOCTYPE html>
-<html>
-<body>
 
-    <!DOCTYPE html>
-    <html>
-    <body>
-    
+  <div class="row">
+  	<div class="col-sm-2">
+    	<h3>Arthimatic Type</h3>
         <table>
-            <tr>
-            <th> Arithmatic Type
-                <th>First Number</th>
-                <th>Second Number</th>
-                <th></th>
-                  <th>Output</th>
-                     
-            </tr>
-            <tr>
-            <th>Addition
-            <br>
-            Multiplication
-            </th>
-             <th>
-            <input type="text" id="FirstNumber"><br>
-           	
-            <input type="text" id="MFirstNumber"><br>
-          
-             </th>
-             <th>
-            
-             <input type="text" id="SecondNumber"><br> 
-           
-             <input type="text" id="MSecondNumber"><br>
-        
-           
-            </th>
-            <th>
-         
-            <input type="button" value="Submit" onclick="calcSum()"> <br>
-          
-              <input type="button" value="Submit" onclick="calcMult()"><br>
-            
-            
-            </th>
-            <th>
-             <input type ="text" id="output"><br>
-             <input type ="text" id="OUTPUT"><br>
-             </th>
-            
-            </tr>
-            
-            
+        Addition<br>
+        Multiplication<br>
         </table>
-    
-    
-    <script>
+  	</div>
+    <div class="col-sm-2">
+      <h3>First Number</h3>
+      <table>
+      <tr>
+       <input type="text" id="FirstNumber"><br>
+       <input type="text" id="MFirstNumber"><br>
+      </tr>
+      </table>
+    </div>
+    <div class="col-sm-2">
+      <h3>Second Number</h3>
+	 <table>
+      <input type="text" id="SecondNumber"><br>
+      <input type="text" id="MSecondNumber"><br>
+     </table>
+    </div>
+    <div class="col-sm-2"> 
+    	<h3>Calculations</h3>
+   	<input type="button" value="Submit" onclick="calcSum()"> <br>
+    <input type="button" value="Submit" onclick="calcMult()"><br>
+    </div>
+    <div class ="col-sm-2">
+      <h3>Output</h3>
+     <table>
+        <input type ="text" id="output"><br>
+        <input type ="text" id="OUTPUT"><br>
+     </table>
+   
+  
+    </div>
+  </div>
+</div>
+<script>
         function calcSum()
         {
         var FirstNumber = document.getElementById("FirstNumber").value;
@@ -79,8 +69,6 @@
         document.getElementById("OUTPUT").value = RESULT
         }
         </script>
-    </body>
-    </html>
-
-
+</body>
+</html>
 
