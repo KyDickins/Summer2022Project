@@ -1,52 +1,68 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>HTML TestCode Bootstrap JQuery Test</title>
+<style>
+  .h1 {font-family:'Times New Roman', Times, serif; font-size:medium; color:red}
+  .p1 {font-family: 'Times New Roman', Times, serif; font-size:x-large;color:midnightblue}
+  .p2 {font-family: 'Times New Roman', Times, serif; font-size:xx-large;color:slategray}
+</style>
+  <title>Bootstrap Example</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   </head>
-  <body style="font-size:1.45vw">
+  <body style="font-size:1vw">
 <body>
 
 
 
   <div class="row">
   	<div class="col-sm-2">
-    	<h3>Arthimatic Type</h3>
+    	<h1 class="h1">Arthimatic Type</h1>
         <table>
+        <p class="p2">
         Addition<br>
         Multiplication<br>
+        </p>
         </table>
   	</div>
     <div class="col-sm-2">
-      <h3>First Number</h3>
+      <h1 class="h1">First Number</h1>
       <table>
       <tr>
-       <input type="text" id="FirstNumber"><br>
-       <input type="text" id="MFirstNumber"><br>
+        <p class="p1">
+          <input type="text" id="FirstNumber"><br>
+          <input type="text" id="MFirstNumber"><br>
+        </p>
+       
       </tr>
       </table>
     </div>
     <div class="col-sm-2">
-      <h3>Second Number</h3>
+      <h1 class="h1">Second Number</h1>
 	 <table>
+    <p class="p1">
       <input type="text" id="SecondNumber"><br>
       <input type="text" id="MSecondNumber"><br>
+    </p>
      </table>
     </div>
     <div class="col-sm-2"> 
-    	<h3>Calculations</h3>
-   	<input type="button" value="Submit" onclick="calcSum()"> <br>
-    <input type="button" value="Submit" onclick="calcMult()"><br>
+    	<h1 class="h1">Calculations</h1>
+      <p class="p1">
+        <input type="button" value="Submit" onclick="calcSum()"> <br>
+        <input type="button" value="Submit" onclick="calcMult()"><br>
+      </p>
     </div>
     <div class ="col-sm-2">
-      <h3>Output</h3>
+      <h1 class="h1">Output</h1>
      <table>
+      <p class="p1">
         <input type ="text" id="output"><br>
         <input type ="text" id="OUTPUT"><br>
+      </p>
      </table>
    
   
