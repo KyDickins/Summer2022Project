@@ -1,90 +1,249 @@
 <!DOCTYPE html>
 <html>
-<head>
-<style>
-  .p3 {font-family:'Times New Roman', Times, serif; font-size:xx-large; color:darkslateblue}
-  .p1 {font-family: 'Times New Roman', Times, serif; font-size:x-large;color:midnightblue}
-  .p2 {font-family: 'Times New Roman', Times, serif; font-size:xx-large;color:slategray}
-</style>
-  <title>Bootstrap Example</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  </head>
-  <body style="font-size:1vw">
-<body>
+    <head>
+        <style>
+            .p1{font-family:'Times New Roman', Times, serif; font-size:xx-large; color:rgb(161, 43, 43)}
+            .collapsible
+            {
+                background-color: #000000;
+                color: rgb(248, 248, 248);
+                cursor: pointer;
+                padding: 18px;
+                 width: 100%;
+                 border: none;
+                 text-align: left;
+                 outline: none;
+                 font-size: xx-large;
+                 font-family:'Times New Roman', Times, serif;
+            }
+            .active, .collapsible:hover 
+            {
+                background-color: rgb(0, 0, 0);
+            }
+            .content 
+            {
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+            background-color: #f1f1f1;
+            font-family:'Times New Roman', Times, serif; 
+            font-size:medium; 
+            color:rgb(19, 5, 51);
+            text-align: left;
+            outline: none;
+
+            }
+        
+        </style>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    </head>
 
 
+    <body>        
+        <div class="row">
+          <div class = "col-sm-6">
+            <p class ="p1">HTML Test 3 - Arithmetic Sections - Addition</p>
+        <button type="button" class="collapsible">
+            <p>Addition Tab</p>
+        </button>
+            <div class = "content">
+                <p>
+                    <div class ="row">
+                        <div class ="col-sm-4">
+                            <input type="text" id="FirstNumber">
+                        </div>
+                        <div class ="col-sm-4">
+                            <input type="text" id="SecondNumber">
+                        </div>
+                        <div class="col-sm-1">
+                            <input type="button" value="Submit" onclick="calcSum()">
+                        </div>
+                        <div class="col-sm-3">
+                            <input type ="text" id="output">
+                        </div>
+                    </div>
+                </p>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <p class="p1">HTML Test 3 - Arithmetic Sections - Multiplication</p>
+        <button type="button" class="collapsible">
+            <p>Multiplication Tab</p>
+        </button>
+            <div class = "content">
+                <p>
+                    <div class ="row">
+                        <div class ="col-sm-4">
+                            <input type="text" id="MFirstNumber">
+                        </div>
+                        <div class ="col-sm-4">
+                            <input type="text" id="MSecondNumber">
+                        </div>
+                        <div class="col-sm-1">
+                            <input type="button" value="Submit" onclick="calcMult()">
+                        </div>
+                        <div class="col-sm-3">
+                            <input type ="text" id="OUTPUT">
+                        </div>
+                    </div>
+                </p>
+            </div>
+          </div>
+        </div>
+        <div class ="row">
+            <div class="col-sm-12">
+                <p class ="p1">
+                    Graph Test
+                </p>
+                
 
-  <div class="row">
-  	<div class="col-sm-2">
-    	<h1 class="p3">Arthimatic Type</h1>
-        <table>
-        <p class="p2">
-        Addition<br>
-        Multiplication<br>
-        </p>
-        </table>
-  	</div>
-    <div class="col-sm-2">
-      <h1 class="p3">First Number</h1>
-      <table>
-      <tr>
-        <p class="p1">
-          <input type="text" id="FirstNumber"><br>
-          <input type="text" id="MFirstNumber"><br>
-        </p>
+                </div>
+                <button type="button" class="collapsible">
+                    <p class="p2">
+                        Graphs
+                    </p>
+                </button>
+                    <div class="content">
+                        <div class="col-sm-4">
+                            <p>
+                                <canvas id="Chart1"></canvas>  
+                            </p>  
+                        </div>  
+                        <div class="col-sm-4">
+                            <p>
+                                <canvas id="Chart2"></canvas>  
+                            </p>
+                        </div>
+                        <div class = col-sm-4>
+                            <p>
+                                <canvas id="Chart3"></canvas>  
+                            </p>
+                        </div>  
+
+            </div>
+        </div>
        
-      </tr>
-      </table>
-    </div>
-    <div class="col-sm-2">
-      <h1 class="p3">Second Number</h1>
-	 <table>
-    <p class="p1">
-      <input type="text" id="SecondNumber"><br>
-      <input type="text" id="MSecondNumber"><br>
-    </p>
-     </table>
-    </div>
-    <div class="col-sm-2"> 
-    	<h1 class="p3">Calculations</h1>
-      <p class="p1">
-        <input type="button" value="Submit" onclick="calcSum()"> <br>
-        <input type="button" value="Submit" onclick="calcMult()"><br>
-      </p>
-    </div>
-    <div class ="col-sm-2">
-      <h1 class="p3">Output</h1>
-     <table>
-      <p class="p1">
-        <input type ="text" id="output"><br>
-        <input type ="text" id="OUTPUT"><br>
-      </p>
-     </table>
-   
-  
-    </div>
-  </div>
-</div>
-<script>
-        function calcSum()
-        {
-        var FirstNumber = document.getElementById("FirstNumber").value;
-        var SecondNumber = document.getElementById("SecondNumber").value;
-        var result = Number(FirstNumber)+Number(SecondNumber); 
-        document.getElementById("output").value = result
-        }
-        function calcMult()
-        {
-        var MFirstNumber = document.getElementById("MFirstNumber").value;
-        var MSecondNumber = document.getElementById("MSecondNumber").value;
-        var RESULT = Number(MFirstNumber) * Number(MSecondNumber); 
-        document.getElementById("OUTPUT").value = RESULT
-        }
-        </script>
-</body>
+       
+            <script>
+                var coll = document.getElementsByClassName("collapsible");
+                var i;
+                
+                for (i = 0; i < coll.length; i++) {
+                  coll[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.display === "block") {
+                      content.style.display = "none";
+                    } else {
+                      content.style.display = "block";
+                    }
+                  });
+                }
+                
+                function calcSum()
+                {
+                    var FirstNumber = document.getElementById("FirstNumber").value;
+                    var SecondNumber = document.getElementById("SecondNumber").value;
+                    var result = Number(FirstNumber)+Number(SecondNumber); 
+                    document.getElementById("output").value = result
+                }
+                
+                function calcMult()
+                {
+                    var MFirstNumber = document.getElementById("MFirstNumber").value;
+                    var MSecondNumber = document.getElementById("MSecondNumber").value;
+                    var RESULT = Number(MFirstNumber) * Number(MSecondNumber); 
+                    document.getElementById("OUTPUT").value = RESULT
+                }
+                var xVal =[0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1.0];
+                var yVal1 = [.2,.5,.34,.32,.66,.32,.14,.198,.76,.1];
+                var yVal2 = [.25,.58,.31,.37,.69,.22,.04,.01,1.2,.15];
+                var yVal3 = [25,.58,31,37,6.9,.22,4,1,12,.15];
+                [
+                    
+                ]
+                var Chart1 = new Chart("Chart1", {
+                    type: "line",
+                    data:
+                    {   labels: xVal,
+                        datasets:
+                        [{
+                        fill: false,
+                        lineTension: .3,
+                        pointRadius: 4,
+                        pointBackgroundColor:"rgba(0,0,255,1)",
+                        borderColor:"black",
+                        data: yVal1
+                        }]
+                    },
+                
+                    options: {
+                        legend: {display: false},
+                        title:
+                        {   
+                            display: true,
+                            text:"Chart 1",
+                            fontSize: 20
+                        }
+                        
+                        
+                            }
+                })
+                var Chart2 = new Chart("Chart2", {
+                    type: "line",
+                    data:
+                    {   labels: xVal,
+                        datasets:
+                        [{
+                        fill: false,
+                        lineTension: .3,
+                        pointRadius: 4,
+                        pointBackgroundColor:"rgba(0,0,255,1)",
+                        borderColor:"red",
+                        data: yVal2
+                        }]
+                    },
+                
+                    options: {
+                        legend: {display: false},
+                        title:
+                        {   
+                            display: true,
+                            text:"Chart 2",
+                            fontSize: 20
+                        }
+                            }
+                })
+                var Chart3 = new Chart("Chart3", {
+                    type: "line",
+                    data:
+                    {   labels: xVal,
+                        datasets:
+                        [{
+                        fill: false,
+                        lineTension: .3,
+                        pointRadius: 4,
+                        pointBackgroundColor:"rgba(0,0,255,1)",
+                        borderColor:"blue",
+                        data: yVal3
+                        }]
+                    },
+                
+                    options: {
+                        legend: {display: false},
+                        title:
+                        {   
+                            display: true,
+                            text:"Chart 3",
+                            fontSize: 20
+                        }
+                            }
+                })
+                </script>
+    </body>
 </html>
-
